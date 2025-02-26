@@ -1,0 +1,36 @@
+<!--#set var="title" value="Лаб 7" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №7. Возведение в степень в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Для возведения числа в степень также существует специальный оператор **. Давайте с его помощью возведем число 10 в третью степень:</p>
+		<textarea readonly>
+<?php
+	echo 10 ** 3; // выведет 1000
+?>
+		</textarea>
+		<p>Давайте возведем в степень значение переменной:</p>
+		<textarea readonly>
+<?php
+	$a = 10;
+	echo $a ** 3; // выведет 1000
+?>
+		
+		</textarea>
+		<p>Может быть такое, что и число, и степень будут содержаться в переменных:</p>
+		<textarea readonly>
+<?php
+	$a = 10;
+	$b = 3;
+	echo $a ** $b; // выведет 1000
+?>
+		</textarea>
+		<div class="task" count="1">
+			Возведите число 2 в 10-ю степень. Выведите результат на экран.
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

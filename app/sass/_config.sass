@@ -1,0 +1,84 @@
+$accent: orange
+$fontsize: 16px
+$textcolor: #333
+$lineheight: 1.65
+$userfont: 'Roboto', sans-serif
+
+// Colors
+$dark: #000
+$blue: #3615f1
+$bg: #f3f3f3
+$border: #c2c2c2
+
+$rad: 0px
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// Import section
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+
+// Font loaded
+@mixin font($fontname, $fontstyle, $fontweight, $fonturl)
+	@font-face
+		font-family: $fontname
+		font-style: $fontstyle
+		font-weight: $fontweight
+		src: url($fonturl) format('truetype')
+
+@include font('Roboto', normal, 400, '../fonts/Roboto-Regular.ttf')
+@include font('Roboto', italic, 400, '../fonts/Roboto-Italic.ttf')
+@include font('Roboto', normal, 700, '../fonts/Roboto-Bold.ttf')
+@include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.ttf')
+
+// General css
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+img
+	max-width: 100%
+	&.lazy
+		display: block
+		background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	@include media-breakpoint-down(md)
+		font-size: 14px
+
+a
+	color: $textcolor
+
+textarea
+	background-color: #282C34
+	color: #ff60af
+	padding: 22px
+	padding-bottom: 0
+	font-family: 'Fira Code'
+	border-radius: $rad
+	width: 100%
+	tab-size: 2
+	border: none
+	resize: none;
+	user-select: none
+	pointer-events: none

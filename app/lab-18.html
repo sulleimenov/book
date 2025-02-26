@@ -1,0 +1,79 @@
+<!--#set var="title" value="Лаб 18" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №18. Поиск ошибок в коде</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>В следующих задачах некоторый программист написал код и, возможно, допустил в нем ошибки. Вы должны проверить, делает ли код то, что описано. Если код работает некорректно, вы должны исправить ошибки.</p>
+		<div class="task" count="1">
+			Код должен получить последний символ строки:
+			<textarea readonly>
+<?php
+	$str = 'abc';
+	echo $str[3];
+?>
+			</textarea>
+		</div>
+		<div class="task" count="2">
+			Код должен находить сумму чисел:
+			<textarea readonly>
+<?php
+	$num1 = 1;
+	$num2 = 2;
+	var_dump('result: ' + $num1 + $num2);
+?>
+			</textarea>
+		</div>
+		<div class="task" count="3">
+			Код должен вывести первую цифру числа:
+			<textarea readonly>
+<?php
+	$num = 123;
+	echo $num[0];
+?>
+			</textarea>
+		</div>
+		<div class="task" count="4">
+			Код должен получить последний символ строки:
+			<textarea readonly>
+<?php
+	$str = 'abc def';
+	echo $str[5]; // ожидаем 'f'
+?>
+			</textarea>
+		</div>
+		<div class="task" count="5">
+			Код должен найти сумму чисел:
+			<textarea readonly>
+<?php
+	$num1 = 1;
+	$num2 = 2;
+	$num3 = 3;
+	
+	echo $num1 + $num2 + $num2; // должно вывести 6
+?>
+			</textarea>
+		</div>
+		<div class="task" count="6">
+			Код должен сложить числа как строки:
+			<textarea readonly>
+<?php
+	echo 1. 2; // должно быть '12'
+?>
+			</textarea>
+		</div>
+		<div class="task" count="7">
+			Код должен получить количество символов в строке:
+			<textarea readonly>
+<?php
+	$str = 'abc def';
+	echo strlen($str); // выводит 7
+?>
+			</textarea>
+			Автор кода ожидал, что выведется 6, но выводится 7. В чем ошибка автора кода?
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

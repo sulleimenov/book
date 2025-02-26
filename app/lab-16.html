@@ -1,0 +1,75 @@
+<!--#set var="title" value="Лаб 16" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №16. Сокращенные операции в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Пусть дан вот такой код:</p>
+		<textarea readonly>
+<?php
+	$num = 1;
+	$num = $num + 2;
+?>
+		</textarea>
+		<p>Как вы видите, здесь в переменную записывается ее текущее значение плюс еще что-то. Для таких операций существует специальный сокращенный оператор +=, смотрите пример:</p>
+		<textarea readonly>
+<?php
+	$num  = 1;
+	$num += 3; // эквивалентно $num = $num + 3;
+?>
+		</textarea>
+		<p>Существуют аналогичные операторы для остальных математических операций:</p>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num -= 3; // эквивалентно $num = $num - 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num *= 3; // эквивалентно $num = $num * 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num /= 3; // эквивалентно $num = $num / 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$str  = 'a';
+	$str .= 'b'; // эквивалентно $str = $str . 'b';
+?>
+		</textarea>
+		<div class="task" count="1">
+			Упростите приведенный код через сокращенные операции:
+			<textarea readonly>
+<?php
+	$num = 47;
+	$num = $num + 7;
+	$num = $num - 18;
+	$num = $num * 10;
+	$num = $num / 15;
+	echo $num;
+?>
+			</textarea>
+		</div>
+		<div class="task" count="2">
+			Упростите приведенный код через сокращенные операции:
+			<textarea readonly>
+<?php
+	$str = 'a';
+	$str = $str . 'b';
+	$str = $str . 'c';
+	
+	echo $str;
+?>
+			</textarea>
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

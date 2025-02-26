@@ -1,0 +1,39 @@
+.list
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 15px
+	text-align: center
+	padding-top: 50px
+	@include media-breakpoint-down(lg)
+		grid-template-columns: repeat(2, 1fr)
+	@include media-breakpoint-down(md)
+		grid-template-columns: repeat(1, 1fr)
+	&__item
+		background-color: $bg
+		border-radius: $rad
+		text-decoration: none
+		padding: 30px 20px
+		border: 1px solid $border
+	&__item-count
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 auto
+		margin-bottom: 10px
+		font-size: 26px
+		width: 50px
+		height: 50px
+		border-radius: 50px
+		border: 1px solid $dark
+		padding-top: 1px
+	&__item-title
+		font-weight: 700
+		font-size: 18px
+	&__item-lvl
+		font-size: 14px
+		&.ease
+			color: green
+		&.medium
+			color: orange
+		&.hard
+			color: red
