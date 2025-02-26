@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Лаб 2</title>
+	<title>Лаб 15</title>
 	<meta name="description" content="HTML starter by Sulleimenov">
 	<meta name="theme-color" content="#009ee0">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,21 +14,29 @@
 <body>
 
 <div class="container">
-	<h1 class="title">Лабораторная работа №2. Обзор начальных PHP команд</h1>
+	<h1 class="title">Лабораторная работа №15. Цифры в строке на PHP</h1>
 	<a href="labs.html" class="back">Назад</a>
 	<div class="content">
-		<p>Команда echo командует вывести что-нибудь на экран. Давайте выведем какую-нибудь строку:</p>
+		<p>Как вы уже знаете, строки могут состоять из цифр. В этом случае все будет работать аналогично:</p>
 		<textarea readonly>
 <?php
-	echo 'hello';
+	$str = '12345';
+
+	echo $str[0]; // выведет '1'
+	echo $str[1]; // выведет '2'
+	echo $str[2]; // выведет '3'
 ?>
 		</textarea>
-		<p>Давайте выведем какое-нибудь число:</p>
+		<p>Можно, например, найти сумму первых двух цифр нашего числа и это будет работать:</p>
 		<textarea readonly>
 <?php
-	echo 123;
+	$str = '12345';
+	echo $str[0] + $str[1]; // выведет 3
 ?>
 		</textarea>
+		<div class="task" count="1">
+			Дана строка '12345'. Найдите сумму цифр этой строки.
+		</div>
 	</div>
 </div>
 

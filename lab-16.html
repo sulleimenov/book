@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Лаб 16</title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+</head>
+<body>
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №16. Сокращенные операции в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Пусть дан вот такой код:</p>
+		<textarea readonly>
+<?php
+	$num = 1;
+	$num = $num + 2;
+?>
+		</textarea>
+		<p>Как вы видите, здесь в переменную записывается ее текущее значение плюс еще что-то. Для таких операций существует специальный сокращенный оператор +=, смотрите пример:</p>
+		<textarea readonly>
+<?php
+	$num  = 1;
+	$num += 3; // эквивалентно $num = $num + 3;
+?>
+		</textarea>
+		<p>Существуют аналогичные операторы для остальных математических операций:</p>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num -= 3; // эквивалентно $num = $num - 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num *= 3; // эквивалентно $num = $num * 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$num  = 2;
+	$num /= 3; // эквивалентно $num = $num / 3;
+?>
+		</textarea>
+		<textarea readonly>
+<?php
+	$str  = 'a';
+	$str .= 'b'; // эквивалентно $str = $str . 'b';
+?>
+		</textarea>
+		<div class="task" count="1">
+			Упростите приведенный код через сокращенные операции:
+			<textarea readonly>
+<?php
+	$num = 47;
+	$num = $num + 7;
+	$num = $num - 18;
+	$num = $num * 10;
+	$num = $num / 15;
+	echo $num;
+?>
+			</textarea>
+		</div>
+		<div class="task" count="2">
+			Упростите приведенный код через сокращенные операции:
+			<textarea readonly>
+<?php
+	$str = 'a';
+	$str = $str . 'b';
+	$str = $str . 'c';
+	
+	echo $str;
+?>
+			</textarea>
+		</div>
+	</div>
+</div>
+
+	<footer class="footer">
+		Автор: Сулейменов Асылхан Аузханович &copy; 2025
+	</footer>
+
+	<script src="js/app.min.js?v=1"></script>
+</body>
+</html>
