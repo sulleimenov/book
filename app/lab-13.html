@@ -1,0 +1,48 @@
+<!--#set var="title" value="Лаб 13" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №13. Длина строки в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Количество символов строки можно найти с помощью функции strlen:</p>
+		<textarea readonly>
+<?php
+	echo strlen('abcde'); // выведет 5
+?>
+		</textarea>
+		<p>Строка может хранится и в переменной:</p>
+		<textarea readonly>
+<?php
+	$str = 'abcde';
+	echo strlen($str); // выведет 5
+?>
+		</textarea>
+		<p>Пробел также является символом:</p>
+		<textarea readonly>
+<?php
+	echo strlen('ab de'); // выведет 5
+?>
+		</textarea>
+		<div class="task" count="1">
+			Запишите в переменную какую-нибудь строку. Выведите на экран длину вашей строки.
+		</div>
+		<p>Функция strlen, как и многие другие строковые функции PHP, некорректно работает с кириллицей - она каждую кириллическую букву считает два раза:</p>
+		<textarea readonly>
+<?php
+	echo strlen('абвгд'); // выведет 10, а не 5
+?>
+		</textarea>
+		<p>Поэтому для строк, которые содержат или потенциально могут содержать проблемные символы, используйте функцию mb_strlen - она будет работать корректно:</p>
+		<textarea readonly>
+<?php
+	echo mb_strlen('абвгд'); // выведет 5
+?>
+		</textarea>
+		<div class="task" count="2">
+			Запишите в переменную какую-нибудь кириллическую строку. Выведите на экран длину вашей строки.
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

@@ -1,0 +1,65 @@
+<!--#set var="title" value="Лаб 10" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №10. Сложение строк в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Для сложения (конкатенации) строк используется оператор точка:</p>
+		<textarea readonly>
+<?php
+	$str = 'abc' . 'def'; // складываем две строки
+	echo $str;            // выведет 'abcdef'
+?>
+		</textarea>
+		<p>Строки также могут храниться в переменных:</p>
+		<textarea readonly>
+<?php
+	$str1 = 'abc';
+	$str2 = 'def';
+	echo $str1 . $str2; // выведет 'abcdef'
+?>
+		</textarea>
+		<p>Можно также складывать переменные и строки:</p>
+		<textarea readonly>
+<?php
+	$str1 = 'abc';
+	$str2 = 'def';
+	echo $str1 . '!!!' . $str2; // выведет 'abc!!!def'
+?>
+		</textarea>
+		<div class="task" count="1">
+			Создайте переменную $str и присвойте ей строку 'hello'. Выведите значение этой переменной на экран.
+		</div>
+		<div class="task" count="2">
+			Создайте переменную с текстом 'abc' и переменную с текстом 'def'. С помощью этих переменных и операции сложения строк выведите на экран строку 'abcdef'.
+		</div>
+		<p>Пусть две строки хранятся в переменных, а при их сложении мы хотим вставить между ними пробел. Это делается так:</p>
+		<textarea readonly>
+<?php
+	$str1 = 'abc';
+	$str2 = 'def';
+	echo $str1 . ' ' . $str2; // выведет 'abc def'
+?>
+		</textarea>
+		<p>Пусть переменная только одна:</p>
+		<textarea readonly>
+<?php
+	$str = 'abc';
+	echo $str . ' ' . 'def'; // выведет 'abc def'
+?>
+		</textarea>
+		<p>В этом случае нет смысла выделять пробел, как отдельную строку - вставим его как часть второго слагаемого:</p>
+		<textarea readonly>
+<?php
+	$str = 'abc';
+	echo $str . ' def'; // выведет 'abc def'
+?>
+		</textarea>
+		<div class="task" count="3">
+			Создайте переменную с текстом 'hello' и переменную с текстом 'world'. С помощью этих переменных и операции сложения строк выведите на экран строку 'hello world'.
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->

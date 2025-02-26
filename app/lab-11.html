@@ -1,0 +1,33 @@
+<!--#set var="title" value="Лаб 11" -->
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №11. Длина строки в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Количество символов строки можно найти с помощью функции strlen:</p>
+		<textarea readonly>
+<?php
+	echo strlen('abcde'); // выведет 5
+?>
+		</textarea>
+		<p>Строка может хранится и в переменной:</p>
+		<textarea readonly>
+<?php
+	$str = 'abcde';
+	echo strlen($str); // выведет 5
+?>
+		</textarea>
+		<p>Пробел также является символом:</p>
+		<textarea readonly>
+<?php
+	echo strlen('ab de'); // выведет 5
+?>
+		</textarea>
+		<div class="task" count="1">
+			Запишите в переменную какую-нибудь строку. Выведите на экран длину вашей строки.
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/parts/footer.html" -->
