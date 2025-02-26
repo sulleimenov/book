@@ -20,9 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("keydown", (event) => {
 			if (
 					(event.ctrlKey && ["c", "x", "v", "s", "u", "p"].includes(event.key.toLowerCase())) ||
-					event.key === "F12"
+					event.key === "F12" || 
+					(event.metaKey && event.shiftKey && event.key.toLowerCase() === "s")
 			) {
 					event.preventDefault();
+					document.body.style.opacity = "0";
+					setTimeout(() => (document.body.style.opacity = "1"), 1000);
 			}
 	});
 
