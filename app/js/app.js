@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				el.style.height = 'auto';
 				el.style.height = (el.scrollHeight) + 'px';
 		});
+		el.addEventListener("select", e => {
+			e.preventDefault()
+		})
 	});
 
 	document.addEventListener("contextmenu", (event) => event.preventDefault());
@@ -24,5 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	document.addEventListener("selectstart", (event) => event.preventDefault());
-
 });
