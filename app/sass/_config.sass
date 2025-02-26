@@ -29,6 +29,7 @@ $gutter: $grid-gutter-width
 		font-weight: $fontweight
 		src: url($fonturl) format('truetype')
 
+@include font('Fira', normal, 400, '../fonts/FiraCode-Regular.ttf')
 @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.ttf')
 @include font('Roboto', italic, 400, '../fonts/Roboto-Italic.ttf')
 @include font('Roboto', normal, 700, '../fonts/Roboto-Bold.ttf')
@@ -74,7 +75,7 @@ textarea
 	color: #ff60af
 	padding: 22px
 	padding-bottom: 0
-	font-family: 'Fira Code'
+	font-family: 'Fira'
 	border-radius: $rad
 	width: 100%
 	tab-size: 2
