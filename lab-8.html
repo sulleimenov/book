@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Лаб 3</title>
+	<title>Лаб 8</title>
 	<meta name="description" content="HTML starter by Sulleimenov">
 	<meta name="theme-color" content="#009ee0">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +14,22 @@
 <body>
 
 <div class="container">
-	<h1 class="title">Лабораторная работа №3. Комментарии в PHP</h1>
+	<h1 class="title">Лабораторная работа №8. Строки в PHP</h1>
 	<a href="labs.html" class="back">Назад</a>
 	<div class="content">
-		<p>Подобно языкам HTML и CSS в языке PHP можно оставлять комментарии. Они бывают однострочными и многострочными.</p>
-		<p>Вот пример однострочного комментария:</p>
+		<p>Как уже упоминалось ранее, данные могут иметь различный тип. Один из типов - числа, мы с вами уже немного изучили. Давайте теперь перейдем к строкам.</p>
+		<p>Строки создаются с помощью кавычек:</p>
 		<textarea readonly>
 <?php
-	echo 'hello'; // комментарий
+	$str = 'abc';
+	echo $str; // выведет 'abc'
 ?>
 		</textarea>
-		<p>Вот пример многострочного комментария:</p>
+		<p>Кавычки могут быть не только одинарными, но и двойными:</p>
 		<textarea readonly>
 <?php
-	/*
-		комментарий
-		комментарий
-	*/
-	echo 'hello';
+	$str = "abc";
+	echo $str; // выведет 'abc'
 ?>
 		</textarea>
 	</div>

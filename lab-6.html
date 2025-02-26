@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Лаб 6</title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №6. Остаток от деления в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Существует специальный оператор %, с помощью которого можно найти остаток от деления одного числа на другое:</p>
+		<textarea readonly>
+<?php
+	echo 10 % 3; // выведет 1
+?>
+		</textarea>
+		<p>Если одно число делится нацело на второе - остаток будет равен нулю:</p>
+		<textarea readonly>
+<?php
+	echo 10 % 2; // выведет 0
+?>
+		</textarea>
+		<p>Оператор %, конечно же, можно применять не только к числам, но и к переменным:</p>
+		<textarea readonly>
+<?php
+	$a = 10;
+	$b = 3;
+	echo $a % $b; // выведет 1
+?>
+		</textarea>
+		<div class="task" count="1">
+			Дана переменная $a со значением 10 и переменная $b со значением 3. Найдите остаток от деления $a на $b.
+		</div>
+	</div>
+</div>
+
+	<footer class="footer">
+		Автор: Сулейменов Асылхан Аузханович &copy; 2025
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Лаб 14</title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №14. Работа с HTML тегами в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Теги HTML с точки зрения PHP представляют собой обычные строки. Давайте, например, с помощью тега &lt;b&gt; выведем на экран жирный текст:</p>
+		<textarea readonly>
+<?php
+	echo '<b>жирный</b>';
+?>
+		</textarea>
+		<p>Можно использовать несколько echo:</p>
+		<textarea readonly>
+<?php
+	echo '<b>';
+	echo 'жирный';
+	echo '</b>';
+?>
+		</textarea>
+		<p>Можно использовать конкатенацию:</p>
+		<textarea readonly>
+<?php
+	$str = 'жирный';
+	echo '<b>' . $str . '</b>';
+?>
+		</textarea>
+		<p>Или вот так:</p>
+		<textarea readonly>
+<?php
+	$str   = 'жирный';
+	$open  = '<b>';
+	$close = '</b>';
+
+	echo $open . $str . $close;
+?>
+		</textarea>
+		<div class="task" count="1">
+			С помощью тега &lt;i&gt; выведите на экран курсивный текст.
+		</div>
+		<div class="task" count="2">
+			С помощью тега &lt;br&gt; выведите на экран столбец чисел от 1 до 9.
+		</div>
+		<p>Давайте с помощью тега &lt;a&gt; выведем на экран ссылку:</p>
+		<textarea readonly>
+<?php
+	echo '<a href="index.php">ссылка</a>';
+?>
+		</textarea>
+		<p>Пусть теперь адрес и текст ссылки хранятся в отдельных переменных:</p>
+		<textarea readonly>
+<?php
+	$href = 'index.php';
+	$text = 'ссылка';
+
+	echo '<a href="' . $href . '">' . $text . '</a>';
+?>
+		</textarea>
+		<div class="task" count="3">
+			С помощью тега &lt;img&gt; выведите на экран какую-нибудь картинку.
+		</div>
+		<div class="task" count="4">
+			С помощью тега &lt;input&gt; выведите на экран инпут с каким-нибудь текстом.
+		</div>
+		<div class="task" count="5">
+			С помощью тега &lt;textarea&gt; выведите на экран многострочное поле ввода с каким-нибудь текстом.
+		</div>
+	</div>
+</div>
+
+	<footer class="footer">
+		Автор: Сулейменов Асылхан Аузханович &copy; 2025
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>

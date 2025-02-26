@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Лаб 7</title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<div class="container">
+	<h1 class="title">Лабораторная работа №7. Возведение в степень в PHP</h1>
+	<a href="labs.html" class="back">Назад</a>
+	<div class="content">
+		<p>Для возведения числа в степень также существует специальный оператор **. Давайте с его помощью возведем число 10 в третью степень:</p>
+		<textarea readonly>
+<?php
+	echo 10 ** 3; // выведет 1000
+?>
+		</textarea>
+		<p>Давайте возведем в степень значение переменной:</p>
+		<textarea readonly>
+<?php
+	$a = 10;
+	echo $a ** 3; // выведет 1000
+?>
+		
+		</textarea>
+		<p>Может быть такое, что и число, и степень будут содержаться в переменных:</p>
+		<textarea readonly>
+<?php
+	$a = 10;
+	$b = 3;
+	echo $a ** $b; // выведет 1000
+?>
+		</textarea>
+		<div class="task" count="1">
+			Возведите число 2 в 10-ю степень. Выведите результат на экран.
+		</div>
+	</div>
+</div>
+
+	<footer class="footer">
+		Автор: Сулейменов Асылхан Аузханович &copy; 2025
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>
