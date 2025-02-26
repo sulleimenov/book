@@ -23,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 	});
 
+	document.addEventListener("selectstart", (event) => event.preventDefault());
+
 });
